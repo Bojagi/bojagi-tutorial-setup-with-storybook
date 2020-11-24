@@ -1,15 +1,9 @@
 import React from 'react';
 import { Accordion, AccordionItem } from './Accordion.jsx';
-import styled, { css } from 'styled-components';
 
 export default {
   title: 'Accordion',
 };
-
-const Wrapper = styled.div`
-  width: 80vw;
-  max-width: 500px;
-`;
 
 export const base = () => (
   <Accordion>
@@ -25,4 +19,4 @@ export const base = () => (
   </Accordion>
 );
 
-base.decorators = [(story) => <Wrapper>{story()}</Wrapper>];
+base.decorators = [(story) => <div style={{ width: '80vw', maxWidth: '500px' }}>{story()}</div>];
